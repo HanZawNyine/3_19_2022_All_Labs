@@ -13,6 +13,3 @@ def Home(request):
     except:
         pass
     return render(request, 'camera_app/home.html')
-
-def gg(request):
-    return HttpResponse("<h1>Hello</h1>")
