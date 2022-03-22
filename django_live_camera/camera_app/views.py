@@ -9,6 +9,7 @@ from .video_camera import VideoCamera, gen
 def Home(request):
     try:
         cam = VideoCamera()
+        print("StreamObj -----------------> ",StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame"))
         return StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame")
     except:
         pass
